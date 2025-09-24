@@ -73,3 +73,26 @@ INSERT INTO books (title, author, isbn, publication_year, category, item_type, t
 ('The Hobbit', 'J.R.R. Tolkien', '9780547928227', 1937, 'Fantasy', 'book', 3, 3),
 ('Inception', 'Christopher Nolan', 'MOV00001', 2010, 'Sci-Fi', 'movie', 2, 2),
 ('The Shawshank Redemption', 'Frank Darabont', 'MOV00002', 1994, 'Drama', 'movie', 1, 1);
+
+-- Additional dummy books/movies for dashboards
+INSERT INTO books (title, author, isbn, publication_year, category, item_type, total_copies, available_copies) VALUES
+('The Silent Patient', 'Alex Michaelides', '9781250301697', 2019, 'Thriller', 'book', 6, 6),
+('Becoming', 'Michelle Obama', '9781524763138', 2018, 'Biography', 'book', 5, 5),
+('Sapiens', 'Yuval Noah Harari', '9780062316110', 2011, 'History', 'book', 4, 4),
+('Educated', 'Tara Westover', '9780399590504', 2018, 'Biography', 'book', 3, 3),
+('The Martian', 'Andy Weir', '9780553418026', 2014, 'Science Fiction', 'book', 5, 5),
+('Deep Work', 'Cal Newport', '9781455586691', 2016, 'Self-Help', 'book', 4, 4),
+('The Pragmatic Programmer', 'Andrew Hunt', '9780201616224', 1999, 'Science', 'book', 5, 5),
+('Clean Code', 'Robert C. Martin', '9780132350884', 2008, 'Science', 'book', 5, 5),
+('Thinking, Fast and Slow', 'Daniel Kahneman', '9780374533557', 2011, 'Science', 'book', 4, 4),
+('Dune', 'Frank Herbert', '9780441013593', 1965, 'Science Fiction', 'book', 6, 6),
+('The Name of the Wind', 'Patrick Rothfuss', '9780756404741', 2007, 'Fantasy', 'book', 4, 4),
+('Gone Girl', 'Gillian Flynn', '9780307588371', 2012, 'Mystery', 'book', 3, 3),
+('The Da Vinci Code', 'Dan Brown', '9780307474278', 2003, 'Thriller', 'book', 6, 6),
+('The Alchemist', 'Paulo Coelho', '9780061122415', 1988, 'Fiction', 'book', 7, 7),
+('Atomic Habits', 'James Clear', '9780735211292', 2018, 'Self-Help', 'book', 8, 8),
+('Interstellar', 'Christopher Nolan', 'MOV00003', 2014, 'Sci-Fi', 'movie', 2, 2),
+('The Godfather', 'Francis Ford Coppola', 'MOV00004', 1972, 'Drama', 'movie', 2, 2),
+('Parasite', 'Bong Joon-ho', 'MOV00005', 2019, 'Drama', 'movie', 1, 1),
+('Spirited Away', 'Hayao Miyazaki', 'MOV00006', 2001, 'Fantasy', 'movie', 2, 2),
+('The Dark Knight', 'Christopher Nolan', 'MOV00007', 2008, 'Action', 'movie', 3, 3);

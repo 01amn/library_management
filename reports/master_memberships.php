@@ -10,7 +10,7 @@ $filterStatus = isset($_GET['filter_status']) ? sanitizeInput($_GET['filter_stat
 $searchTerm = isset($_GET['search']) ? sanitizeInput($_GET['search']) : '';
 
 // Build query based on filters
-$sql = "SELECT * FROM members WHERE 1=1";
+$sql = "SELECT * FROM memberships WHERE 1=1";
 $params = [];
 $types = "";
 

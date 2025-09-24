@@ -45,7 +45,7 @@ $activeTransactions = $stmt->get_result();
                     <?php endif; ?>
                     <div class="mt-3">
                         <a href="book_availability.php" class="btn btn-primary">Check Book Availability</a>
-                        <a href="issue_book.php" class="btn btn-success">Issue a Book</a>
+                        <a href="../transactions/issue_book.php" class="btn btn-success">Issue a Book</a>
                     </div>
                 </div>
             </div>
@@ -59,8 +59,8 @@ $activeTransactions = $stmt->get_result();
                 <div class="card-body">
                     <div class="d-grid gap-2">
                         <a href="book_availability.php" class="btn btn-outline-primary">Check Book Availability</a>
-                        <a href="issue_book.php" class="btn btn-outline-success">Issue a Book</a>
-                        <a href="return_book.php" class="btn btn-outline-warning">Return a Book</a>
+                        <a href="../transactions/issue_book.php" class="btn btn-outline-success">Issue a Book</a>
+                        <a href="../transactions/return_book.php" class="btn btn-outline-warning">Return a Book</a>
                         <a href="book_list.php" class="btn btn-outline-info">View Book Catalog</a>
                         <a href="../reports/index.php" class="btn btn-outline-secondary">View Reports</a>
                         <a href="../chart.php" class="btn btn-outline-dark">View System Chart</a>

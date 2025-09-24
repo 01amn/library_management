@@ -1,5 +1,10 @@
 // Custom JavaScript for Library Management System
 
+// Function to go back to the previous page
+function goBack() {
+    window.history.back();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Toggle sidebar on mobile
     const sidebarToggle = document.querySelector('.navbar-toggler');

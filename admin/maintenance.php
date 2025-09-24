@@ -1,12 +1,11 @@
 <?php
-// Set page title
+require_once '../config.php';
+if (!isLoggedIn()) { redirect('../index.php'); }
+if (!isAdmin()) { redirect('../user/dashboard.php'); }
+
+// Set page title and then include header
 $pageTitle = "Maintenance";
-
 require_once '../includes/header.php';
-
-if (!isAdmin()) {
-    redirect('../user/dashboard.php');
-}
 ?>
 
 <div class="container-fluid">

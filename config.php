@@ -1,4 +1,8 @@
 <?php
+// Development error visibility (comment these 3 lines for production)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 // Database configuration
 $host = "localhost";
 $username = "root";
@@ -6,6 +10,9 @@ $password = "";
 $database = "library_management";
 
 // Create database connection
+// Throw mysqli errors as exceptions for clearer stack traces
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 $conn = new mysqli($host, $username, $password, $database);
 
 // Check connection

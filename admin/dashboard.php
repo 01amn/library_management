@@ -1,14 +1,12 @@
 <?php
-// Set page title
+// Early admin gate before any output
+require_once '../config.php';
+if (!isLoggedIn()) { redirect('../index.php'); }
+if (!isAdmin()) { redirect('../user/dashboard.php'); }
+
+// Set page title and then include header (safe to output now)
 $pageTitle = "Admin Dashboard";
-
-// Include header
 require_once '../includes/header.php';
-
-// Check if user is admin
-if (!isAdmin()) {
-    redirect('../user/dashboard.php');
-}
 
 // Get dashboard statistics
 $totalBooks = 0;

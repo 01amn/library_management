@@ -1,8 +1,10 @@
 <?php
-// Set page title
-$pageTitle = "Issue Book";
+// Gate before output to avoid header already sent
+require_once '../config.php';
+if (!isLoggedIn()) { redirect('../index.php'); }
 
-// Include header
+// Set page title and then include header
+$pageTitle = "Issue Book";
 require_once '../includes/header.php';
 
 // Initialize variables
@@ -194,7 +196,7 @@ if ($result && $result->num_rows > 0) {
                     }
                     ?>
                     
-                    <?php if ($book && !$error): ?>
+                    <?php if ($book && empty($errors)): ?>
                     <div class="alert alert-info">
                         <h6>Selected Item Details:</h6>
                         <p><strong>Title:</strong> <?php echo htmlspecialchars($book['title']); ?><br>

@@ -1,7 +1,10 @@
 <?php
+require_once '../config.php';
+if (!isLoggedIn()) { redirect('../index.php'); }
+if (!isAdmin()) { redirect('../user/dashboard.php'); }
+
 $pageTitle = "User Management";
 require_once '../includes/header.php';
-if (!isAdmin()) { redirect('../user/dashboard.php'); }
 
 $message = '';
 

@@ -8,12 +8,16 @@ require_once '../includes/validation.php';
 // Check if user is logged in
 if (!isLoggedIn()) {
     redirect('../index.php');
+    exit; // Make sure to exit after redirect
 }
 
 // Get user information
 $userId = $_SESSION['user_id'];
 $userType = $_SESSION['user_type'];
 $username = $_SESSION['username'];
+
+// Start output buffering to prevent "headers already sent" errors
+ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +44,14 @@ $username = $_SESSION['username'];
                     <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    
+                    <!-- Back button -->
+                    <div class="mb-3 ps-3">
+                        <button onclick="goBack()" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                    </div>
+                    
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center py-3 border-bottom" href="dashboard.php">

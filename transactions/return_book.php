@@ -1,8 +1,10 @@
 <?php
-// Set page title
-$pageTitle = "Return Book";
+// Gate before output
+require_once '../config.php';
+if (!isLoggedIn()) { redirect('../index.php'); }
 
-// Include header
+// Set page title and then include header
+$pageTitle = "Return Book";
 require_once '../includes/header.php';
 
 // Initialize variables

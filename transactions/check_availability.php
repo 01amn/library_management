@@ -1,8 +1,9 @@
 <?php
-// Set page title
-$pageTitle = "Check Book Availability";
+require_once '../config.php';
+if (!isLoggedIn()) { redirect('../index.php'); }
 
-// Include header
+// Set page title and then include header
+$pageTitle = "Check Book Availability";
 require_once '../includes/header.php';
 
 // Initialize variables

@@ -1,14 +1,11 @@
 <?php
-// Set page title
+require_once '../config.php';
+if (!isLoggedIn()) { redirect('../index.php'); }
+if (!isAdmin()) { redirect('../user/dashboard.php'); }
+
+// Set page title and then include header
 $pageTitle = "Update Book/Movie";
-
-// Include header
 require_once '../includes/header.php';
-
-// Check if user is admin
-if (!isAdmin()) {
-    redirect('../user/dashboard.php');
-}
 
 // Initialize variables
 $bookId = $title = $author = $isbn = $publicationYear = $category = $itemType = $totalCopies = $message = "";
