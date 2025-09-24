@@ -1,3 +1,4 @@
-﻿# library_management
-# library_management
-it is based on core php using xampp, html, css, jquery etc.
+## About 
+This is the project for Axicom Consulting -- Library Management System
+
+## Screenshots
